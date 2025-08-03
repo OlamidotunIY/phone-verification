@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
     // Prepare SMS payload
     const payload = {
-      sender: "SphereX",
+      sender: "BLUETTI",
       recipients: `234${cleanPhoneNumber}`,
       msg: `Your OTP is ${code}. Do not share with anyone, it expires in 10 mins.`,
       type: 1,

@@ -83,7 +83,7 @@ export default function Home() {
               value={phoneNumber}
               onChange={handlePhoneChange}
               placeholder="(555) 123-4567"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-black"
               required
               disabled={isLoading}
             />
