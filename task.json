@@ -1,0 +1,56 @@
+[
+    {
+      "id": "task-01",
+      "title": "Set up project structure",
+      "description": "Ensure the existing Next.js project is clean with required pages and API folders.",
+      "dependsOn": []
+    },
+    {
+      "id": "task-02",
+      "title": "Create phone input page (`/`)",
+      "description": "Build UI to collect user's phone number with validation. Include 'Send Code' button.",
+      "dependsOn": ["task-01"]
+    },
+    {
+      "id": "task-03",
+      "title": "Build API route `/api/send-code`",
+      "description": "Accept phone number, generate verification code, store it in memory or Redis, and simulate sending SMS.",
+      "dependsOn": ["task-02"]
+    },
+    {
+      "id": "task-04",
+      "title": "Redirect user to `/verify` after sending code",
+      "description": "Ensure user is redirected to the verification page after a successful request.",
+      "dependsOn": ["task-03"]
+    },
+    {
+      "id": "task-05",
+      "title": "Create verification page (`/verify`)",
+      "description": "Build UI for entering the 6-digit code and a 'Verify' button.",
+      "dependsOn": ["task-04"]
+    },
+    {
+      "id": "task-06",
+      "title": "Build API route `/api/verify-code`",
+      "description": "Verify the submitted code matches stored code for the phone number. Return success/failure.",
+      "dependsOn": ["task-05"]
+    },
+    {
+      "id": "task-07",
+      "title": "Handle verification success/failure on frontend",
+      "description": "Show appropriate messages or redirect upon successful verification.",
+      "dependsOn": ["task-06"]
+    },
+    {
+      "id": "task-08",
+      "title": "Add basic mobile responsiveness",
+      "description": "Ensure both pages are responsive and user-friendly on small screens.",
+      "dependsOn": ["task-02", "task-05"]
+    },
+    {
+      "id": "task-09",
+      "title": "Add simple error handling and loading states",
+      "description": "Improve UX with loading indicators and display API errors to the user.",
+      "dependsOn": ["task-03", "task-06"]
+    }
+  ]
