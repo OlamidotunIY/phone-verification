@@ -4,7 +4,7 @@ import axios from "axios";
 import randomstring from "randomstring";
 
 const api = axios.create({
-  baseURL: 'https://api.smarthivesms.com/api/sms/send',
+  baseURL: 'https://api.smarthivesms.com/api/sim_route/sms/send',
   headers: {
     'Content-Type': 'application/json',
     'x-api-key': process.env.API_KEY as string,
