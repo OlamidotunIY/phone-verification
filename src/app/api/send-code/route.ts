@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     const payload = {
       sender: "BLUETTI",
       recipients: `234${cleanPhoneNumber}`,
-      msg: `Your OTP is ${code}. Do not share with anyone, it expires in 10 mins.`,
+      msg: `Hello your code is 123456`,
       type: 1,
       route: "TRX",
       ext_ref: randomstring.generate(10),
