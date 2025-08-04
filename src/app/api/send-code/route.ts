@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     const payload = {
       sender: "BLUETTI",
       recipients: `234${cleanPhoneNumber}`,
-      msg: `Hello your code is 123456`,
+      msg: `Hello your code is ${code}`,
       type: 1,
       route: "TRX",
       ext_ref: randomstring.generate(10),
